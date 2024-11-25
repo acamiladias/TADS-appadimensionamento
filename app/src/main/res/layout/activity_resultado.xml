@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroung"
+    tools:context=".ResultadoActivity">
+
+    <!-- Título da página -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="Resultado do Dimensionamento"
+        android:textColor="#484848"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Subtítulo -->
+    <TextView
+        android:id="@+id/textViewTitle3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confira abaixo o modelo ideal indicado para sua piscina."
+        android:textColor="#484848"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <!-- CardView para mostrar os resultados -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewTitle3">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <!-- Nome do modelo -->
+            <TextView
+                android:id="@+id/textViewModelo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="#FF0000"
+                android:textSize="34sp"
+                android:textStyle="bold|italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="FT-80" />
+
+            <!-- Capacidade do modelo -->
+            <TextView
+                android:id="@+id/textViewCapacidade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="#484848"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewModelo"
+                tools:text="80000 BTU's" />
+
+            <!-- Imagem do modelo -->
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:contentDescription="Imagem do modelo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewCapacidade"
+                app:srcCompat="@drawable/ic_launcher_foreground" />
+
+            <!-- Descrição do modelo -->
+            <TextView
+                android:id="@+id/textViewDescricao"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="#484848"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageView"
+                tools:text="Descrição do modelo calculado." />
+
+            <!-- Botão "salvar" -->
+            <Button
+                android:id="@+id/buttonVerMais"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/azul2"
+                android:text="Ver mais"
+                android:textColor="@color/azul1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.496"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewDescricao" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- ScrollView para informações adicionais -->
+    <ScrollView
+        android:id="@+id/scrollViewInfo"
+        android:layout_width="381dp"
+        android:layout_height="241dp"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardView1"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Comprimento da piscina -->
+            <TextView
+                android:id="@+id/textViewComprimento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Comprimento: "
+                android:textColor="#484848"
+                android:textSize="14sp" />
+
+            <!-- Largura da piscina -->
+            <TextView
+                android:id="@+id/textViewLargura"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Largura: "
+                android:textColor="#484848"
+                android:textSize="14sp" />
+
+            <!-- Profundidade da piscina -->
+            <TextView
+                android:id="@+id/textViewProfundidade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Profundidade: "
+                android:textColor="#484848"
+                android:textSize="14sp" />
+
+            <!-- Tipo de construção -->
+            <TextView
+                android:id="@+id/textViewTipoConstrucao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Tipo de Construção: "
+                android:textColor="#484848"
+                android:textSize="14sp" />
+
+            <!-- Uso do ano todo ou menos inverno -->
+            <TextView
+                android:id="@+id/textViewUso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Uso: "
+                android:textColor="#484848"
+                android:textSize="14sp" />
+
+            <!-- Condição do vento -->
+            <TextView
+                android:id="@+id/textViewVento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Vento: "
+                android:textColor="#484848"
+                android:textSize="14sp" />
+
+            <!-- Área da piscina -->
+            <TextView
+                android:id="@+id/textViewArea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Área: "
+                android:textColor="#484848"
+                android:textSize="14sp" />
+
+            <!-- Volume da piscina -->
+            <TextView
+                android:id="@+id/textViewVolume"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Volume: "
+                android:textColor="#484848"
+                android:textSize="14sp" />
+
+            <!-- Pontuação final -->
+            <TextView
+                android:id="@+id/textViewPontuacao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pontuação: "
+                android:textColor="#484848"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/buttonNovo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:backgroundTint="@color/azul3"
+        android:text="Novo Dimensionamento"
+        android:textColor="@color/azul1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollViewInfo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

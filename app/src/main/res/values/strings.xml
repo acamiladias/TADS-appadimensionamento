@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">TADS.AppDimensionamento</string>
+
+    <string name="descricao">
+        Automação com timer para motobomba\n
+        Sistema de degelo com reversão de gás quente\n
+        Aquece e resfria a água\n
+        Não restringe as características da água\n
+        Gabinete totalmente em ABS, resistente à corrosão\n
+        Condensador em titânio\n
+        Instalação fácil e prática\n
+        Painel Touchscreen de fácil interação com o usuário
+    </string>
+
+    <string name="descft80">
+        Capacidade de aquecimento (BTU/h): 80000\n
+        Capacidade de aquecimento (kcal): 20000\n
+        Potência nominal (kW): 3,8\n
+        COP: 6,1\n
+        Temperatura de Aquecimento (°C): 40\n
+        Alimentação Elétrica: 220V 1~\n
+        Corrente Máxima (A): 23\n
+        Fluído Refrigerante: R-22\n
+        Condensador: Titânio\n
+        Direção do Fluxo de Ar: Superior\n
+        Vazão de água (m³/h): 7\n
+        Pressão de Água Mínima/Máxima (m.c.a.): 3,06 ~ 20\n
+        Tipo de degelo - Automático Parada do Compressor: Opcional Gás Quente\n
+        Nível de Ruído a 1m em dB(A): 67\n
+        Material das Tampas e Gabinete: ABS\n
+        Grau de Proteção: IPX5\n
+        Dimensões do Produdo L x P x A (mm): 710x680x670\n
+        Peso Líquido (kg): 70\n
+    </string>
+
+</resources>

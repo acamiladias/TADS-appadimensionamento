@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroung"
+    tools:context=".AmbienteActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dados do ambiente"
+        android:textColor="#484848"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.065"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.055" />
+
+    <TextView
+        android:id="@+id/textView32"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Preencha todos os campos para o correto dimensionamento."
+        android:textColor="#484848"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.237"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.085" />
+
+    <!-- Tipo de aplicação -->
+
+    <TextView
+        android:id="@+id/textViewAplicação"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="110dp"
+        android:text="Aplicação (selecione uma opção)"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup_aplicacao_residencial_comercial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAplicação">
+
+        <RadioButton
+            android:id="@+id/radioGroup_aplicacao_residencial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/radio_selector"
+            android:button="@android:color/transparent"
+            android:padding="10dp"
+            android:text="Residencial"
+            android:textColor="@drawable/text_color" />
+
+        <RadioButton
+            android:id="@+id/radioGroup_aplicacao_comercial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/radio_selector"
+            android:button="@android:color/transparent"
+            android:padding="10dp"
+            android:text="Comercial"
+            android:textColor="@drawable/text_color" />
+
+    </RadioGroup>
+
+    <!-- Tipo de uso -->
+
+    <TextView
+        android:id="@+id/textViewUsoAnoInverno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Uso (selecione uma opção)"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup_aplicacao_residencial_comercial" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup_uso_anotodo_menosinverno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewUsoAnoInverno">
+
+        <RadioButton
+            android:id="@+id/radioGroup_uso_anotodo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/radio_selector"
+            android:button="@android:color/transparent"
+            android:padding="10dp"
+            android:text="Ano todo"
+            android:textColor="@drawable/text_color" />
+
+        <RadioButton
+            android:id="@+id/radioGroup_uso_menosinverno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/radio_selector"
+            android:button="@android:color/transparent"
+            android:padding="10dp"
+            android:text="Menos inverno"
+            android:textColor="@drawable/text_color" />
+
+    </RadioGroup>
+
+    <!-- Tipo de vento -->
+
+    <TextView
+        android:id="@+id/textViewVelocidadedoVento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Velocidade do vento (selecione uma opção)"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup_uso_anotodo_menosinverno" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup_vento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewVelocidadedoVento">
+
+        <RadioButton
+            android:id="@+id/radioGroup_vento_nenhum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/radio_selector"
+            android:button="@android:color/transparent"
+            android:padding="10dp"
+            android:text="Nenhum"
+            android:textColor="@drawable/text_color" />
+
+        <RadioButton
+            android:id="@+id/radioGroup_vento_fraco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/radio_selector"
+            android:button="@android:color/transparent"
+            android:padding="10dp"
+            android:text="Fraco"
+            android:textColor="@drawable/text_color" />
+
+        <RadioButton
+            android:id="@+id/radioGroup_vento_moderado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/radio_selector"
+            android:button="@android:color/transparent"
+            android:padding="10dp"
+            android:text="Moderado"
+            android:textColor="@drawable/text_color" />
+
+        <RadioButton
+            android:id="@+id/radioGroup_vento_forte"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/radio_selector"
+            android:button="@android:color/transparent"
+            android:padding="10dp"
+            android:text="Forte"
+            android:textColor="@drawable/text_color" />
+
+    </RadioGroup>
+
+    <!-- Entrada temperatura ambiente -->
+
+    <TextView
+        android:id="@+id/textViewTemperaturaAmbiente"
+        android:layout_width="96dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="40dp"
+        android:text="Temperatura  °C média ambiente"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toStartOf="@+id/temperaturaAmbiente"
+        app:layout_constraintHorizontal_bias="0.592"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup_vento" />
+
+    <EditText
+        android:id="@+id/temperaturaAmbiente"
+        android:layout_width="225dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="36dp"
+        android:background="@drawable/edittext_backgroud"
+        android:ems="10"
+        android:hint="26.0"
+        android:inputType="number|numberDecimal"
+        android:textAlignment="center"
+        android:textColor="@color/azul3"
+        android:textColorHint="#D7D7D7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup_vento" />
+
+    <!-- Entrada temperatura da água -->
+
+    <TextView
+        android:id="@+id/textViewTemperaturaAguaDesejada"
+        android:layout_width="96dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="40dp"
+        android:text="Temperatura °C desejada da água"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toStartOf="@+id/temperaturaAguaDesejada"
+        app:layout_constraintHorizontal_bias="0.592"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTemperaturaAmbiente" />
+
+    <EditText
+        android:id="@+id/temperaturaAguaDesejada"
+        android:layout_width="225dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="36dp"
+        android:background="@drawable/edittext_backgroud"
+        android:ems="10"
+        android:hint="35.0"
+        android:inputType="number|numberDecimal"
+        android:textAlignment="center"
+        android:textColor="@color/azul3"
+        android:textColorHint="#D7D7D7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/temperaturaAmbiente" />
+
+    <!-- Botão voltar e calcular -->
+
+    <Button
+        android:id="@+id/button_Calcular"
+        android:layout_width="125dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="28dp"
+        android:backgroundTint="@color/red"
+        android:text="Calcular"
+        android:textColor="@color/azul1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/temperaturaAguaDesejada" />
+
+    <Button
+        android:id="@+id/button_voltar"
+        android:layout_width="125dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="101dp"
+        android:backgroundTint="@color/azul3"
+        android:text="Voltar"
+        android:textColor="@color/azul1"
+        app:layout_constraintEnd_toStartOf="@+id/button_Calcular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/temperaturaAguaDesejada" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
